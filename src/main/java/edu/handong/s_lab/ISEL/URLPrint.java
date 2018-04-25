@@ -9,18 +9,23 @@ public class URLPrint {
 	private void getURL() {
 		URLData u = new URLData();
 		u.address = "https://api.github.com/search/repositories?q=language:java&sort=stars&order=desc";
+		
 		try {
 			url = new URL(u.address);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(url);
+		//System.out.println(url);
+	}
+	
+	private void printEachURL() {
+		
 	}
 	
 	public static void main(String[] args) {
 		URLPrint p = new URLPrint();
 		p.getURL();
-
+		p.printEachURL();
 	}
 
 }
