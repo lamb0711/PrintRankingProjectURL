@@ -25,9 +25,9 @@ public class URLPrint {
 			br = new BufferedReader(new InputStreamReader(code.getInputStream()));
 			
 			String line;
-			String sLine = null;
+			//String sLine = null;
 			while((line = br.readLine()) != null) {
-				sLine.s//copy line to sLine 10char
+				String sLine = new String(line.substring(0,9));//copy line to sLine 10char
 				if(sLine.equals("\"html_url\"")) {
 					System.out.println(line+".git");
 				}
