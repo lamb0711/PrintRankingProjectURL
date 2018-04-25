@@ -2,17 +2,17 @@ package edu.handong.s_lab.ISEL;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class URLPrint {
 	private static URL url;
+	public ArrayList<String> eachAddress;
 
 	private void getURL() {
-		URLData u = new URLData();
-		String ar = "https://api.github.com/search/repositories?q=language:java&sort=stars&order=desc";
-		u.setAddress(ar);
+		String address = "https://api.github.com/search/repositories?q=language:java&sort=stars&order=desc";
 		
 		try {
-			url = new URL(u.address);
+			url = new URL(address);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
