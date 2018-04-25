@@ -27,7 +27,7 @@ public class URLPrint {
 			String line;
 			//String sLine = null;
 			while((line = br.readLine()) != null) {
-				String sLine = new String(line.substring(0,9));//copy line to sLine 10char
+				String sLine = new String(line.substring(0,9));
 				if(sLine.equals("\"html_url\"")) {
 					System.out.println(line+".git");
 				}
@@ -35,7 +35,6 @@ public class URLPrint {
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-		//System.out.println(url);
 	}
 
 
