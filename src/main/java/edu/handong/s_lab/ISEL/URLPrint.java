@@ -12,9 +12,9 @@ public class URLPrint {
 		try {
 			url = new URL(u.address);
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println(url);
 	}
 	
 	public static void main(String[] args) {
