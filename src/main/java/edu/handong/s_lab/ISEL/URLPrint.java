@@ -8,7 +8,8 @@ public class URLPrint {
 
 	private void getURL() {
 		URLData u = new URLData();
-		u.address = "https://api.github.com/search/repositories?q=language:java&sort=stars&order=desc";
+		String ar = "https://api.github.com/search/repositories?q=language:java&sort=stars&order=desc";
+		u.setAddress(ar);
 		
 		try {
 			url = new URL(u.address);
