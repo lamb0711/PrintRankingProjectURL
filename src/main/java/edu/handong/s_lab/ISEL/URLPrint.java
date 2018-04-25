@@ -21,25 +21,29 @@ public class URLPrint {
 			url = new URL(address);//make URL object
 			eachAddress = new ArrayList<String>();
 			code = (HttpURLConnection)url.openConnection();//connection with this address
-			//code.setRequestMethod("GET");
 			
 			br = new BufferedReader(new InputStreamReader(code.getInputStream()));
 			
 			String line;
+			String sLine = null;
 			while((line = br.readLine()) != null) {
-				
+				sLine.s//copy line to sLine 10char
+				if(sLine.equals("\"html_url\"")) {
+					System.out.println(line+".git");
+				}
 			}
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 		//System.out.println(url);
 	}
-	
+
+
 	private void printEachURL() {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		URLPrint p = new URLPrint();
 		p.getURL();
 		p.printEachURL();
