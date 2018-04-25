@@ -1,11 +1,20 @@
 package edu.handong.s_lab.ISEL;
 
-import java.net.URL;
+import java.util.ArrayList;
 
 public class URLData {
 	public String address;
-	public URL url;
+	public ArrayList<String> eachAddress;
 	
+
+	public ArrayList<String> getEachAddress() {
+		return eachAddress;
+	}
+
+	public void setEachAddress(ArrayList<String> eachAddress) {
+		this.eachAddress = eachAddress;
+	}
+
 	public String getAddress() {
 		return address;
 	}
@@ -13,13 +22,6 @@ public class URLData {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public URL getUrl() {
-		return url;
-	}
-	
-	public void setUrl(URL url) {
-		this.url = url;
-	}
+
 
 }
